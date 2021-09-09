@@ -44,6 +44,18 @@ For example, here are filepaths to two files in this dataset.`
 
 **log_data/2018/11/2018-11-13-events.json**
 
+Se você quiser olhar para os dados **JSON** dentro de **log_data** arquivos, você precisará
+criar um dataframe pandas para ler os dados. Lembre-se de primeiro importar bibliotecas
+**JSON** e **pandas**.
+
+>df = pd.read_json(filepath, lines=True)
+>
+Por exemplo, leria o arquivo de dados 
+>2018-11-01-events.json. df =
+pd.read_json('data/log_data/2018/11/2018-11-01-events.json', lines=True)
+
+Caso você precise de uma atualização nos formatos de arquivo JSON
+
 ## Esquema para análise de reprodução de música
 
 Usando os conjuntos de dados de música e log, você precisará criar um esquema estelar
@@ -52,9 +64,7 @@ tabelas.
 
 **Diagrama do esquema do banco de dados**  
 
-
-
-
+![image](https://raw.githubusercontent.com/Rafaelnts/Projeto-Modelagem-de-Dados-com-Postgres-/main/Diagrama.png)
 
 
 **Tabela de Fatos**
@@ -93,8 +103,21 @@ Abaixo estão as etapas que você pode seguir para concluir o projeto:
 
 Criar tabelas
 
-1. Escreva declarações para criar cada tabela. CREATEsql_queries.py
-2. Escreva declarações para derrubar cada tabela se ela existir. DROP sql_queries.py
-3. Criar seu banco de dados e tabelas. create_tables.py
+1. Escreva declarações para criar cada tabela. CREATE [create_tables.py](https://github.com/Rafaelnts/Projeto-Modelagem-de-Dados-com-Postgres-/blob/main/create_tables.py)
+2. Escreva declarações para derrubar cada tabela se ela existir. DROP [sql_queries.py](https://github.com/Rafaelnts/Projeto-Modelagem-de-Dados-com-Postgres-/blob/main/sql_queries.py)
+3. Criar seu banco de dados e tabelas. [create_tables.py](https://github.com/Rafaelnts/Projeto-Modelagem-de-Dados-com-Postgres-/blob/main/create_tables.py)
 4. Para confirmar a criação de suas tabelas com as colunas corretas. Certifique-se de
-clicar em "Reiniciar o kernel" para fechar a conexão ao banco de dados depois de executar este notebook. test.ipynb
+clicar em "Reiniciar o kernel" para fechar a conexão ao banco de dados depois de executar este notebook. [test.ipynb](https://github.com/Rafaelnts/Projeto-Modelagem-de-Dados-com-Postgres-/blob/main/test.ipynb)
+
+### Para criar todas as tabelas de que precisava, executei as quatro etapas a seguir:
+
+*Escreva as instruções CREATE em [sql_queries.py](https://github.com/Rafaelnts/Projeto-Modelagem-de-Dados-com-Postgres-/blob/main/sql_queries.py) para criar cada tabela de acordo com o esquema definido acima.*
+
+*Escreva instruções DROP em [sql_queries.py](https://github.com/Rafaelnts/Projeto-Modelagem-de-Dados-com-Postgres-/blob/main/sql_queries.py) para eliminar cada tabela, se houver.*
+
+*Execute [create_tables.py](https://github.com/Rafaelnts/Projeto-Modelagem-de-Dados-com-Postgres-/blob/main/create_tables.py) para criar o banco de dados e as tabelas.*
+
+*Execute [test.ipynb](https://github.com/Rafaelnts/Projeto-Modelagem-de-Dados-com-Postgres-/blob/main/test.ipynb)
+ para confirmar a criação das tabelas com as colunas corretas.* 
+ 
+ *Certifique-se de clicar em "Reiniciar kernel" para fechar a conexão com o banco de dados após executar este notebook.*
