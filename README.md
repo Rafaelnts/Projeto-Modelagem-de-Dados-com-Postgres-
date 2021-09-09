@@ -69,22 +69,22 @@ tabelas.
 
 **Tabela de Fatos**
 
-1. songplays - registros em dados de registro associados a reproduções de músicas,
+1. **songplays** - registros em dados de registro associados a reproduções de músicas,
 ou seja, registros com página NextSong o songplay_id, start_time, user_id, nível, song_id, artist_id, session_id,
 localização, user_agent
 
 **Tabelas de dimensão**
 
-2. usuários - usuários no aplicativo
+2. **usuários** - usuários no aplicativo
 o user_id, first_name, last_name, gênero, nível
 
-3. músicas - músicas no banco de dados de música
+3. **músicas** - músicas no banco de dados de música
 o song_id, título, artist_id, ano, duração
 
-4. artistas - artistas em banco de dados de música
+4. **artistas** - artistas em banco de dados de música
 o artist_id, nome, localização, latitude, longitude
 
-5. tempo - timestamps de discos em songplays divididos em unidades específicas
+5. **tempo** - timestamps de discos em songplays divididos em unidades específicas
 o start_time, hora, dia, semana, mês, ano, dia da semana
 
 ## Bibliotecas necessárias
