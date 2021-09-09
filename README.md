@@ -56,6 +56,7 @@ tabelas.
 
 
 
+
 **Tabela de Fatos**
 
 1. songplays - registros em dados de registro associados a reproduções de músicas,
@@ -76,13 +77,22 @@ o artist_id, nome, localização, latitude, longitude
 5. tempo - timestamps de discos em songplays divididos em unidades específicas
 o start_time, hora, dia, semana, mês, ano, dia da semana
 
+## Bibliotecas necessárias
 
+- pandas
+- psycopg2
+- sql_queries
+
+## Motivação
+
+Aprendo Modelagem de Dados com RDM usando metadados JSON que representam as músicas e arquivos JSON que representam a atividade do usuário.
 
 ### :pushpin: Etapas do Projeto
 
 Abaixo estão as etapas que você pode seguir para concluir o projeto:
 
 Criar tabelas
+
 1. Escreva declarações para criar cada tabela. CREATEsql_queries.py
 2. Escreva declarações para derrubar cada tabela se ela existir. DROP sql_queries.py
 3. Criar seu banco de dados e tabelas. create_tables.py
