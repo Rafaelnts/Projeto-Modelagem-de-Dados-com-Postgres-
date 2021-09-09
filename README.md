@@ -89,9 +89,9 @@ o start_time, hora, dia, semana, mês, ano, dia da semana
 
 ## Bibliotecas necessárias
 
-- pandas
-- psycopg2
-- sql_queries
+- `pandas`
+- `psycopg2`
+- `sql_queries`
 
 ## Motivação
 
